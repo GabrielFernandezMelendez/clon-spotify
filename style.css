@@ -1,0 +1,43 @@
+/*variables para no  duplicar tanto  codigo*/
+:root {
+  --color-brand: #1db954;
+  --color-bg: #191414;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b3b3b3;
+
+  --font-base: "Montserrat", Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+}
+
+/*reset css dado en el  github*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*mis estilo (para movil)*/
+#bar-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  width: 40%;
+  height: auto; 
+}
