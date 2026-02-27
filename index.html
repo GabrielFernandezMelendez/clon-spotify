@@ -11,7 +11,7 @@
 
 <body>
 
-  <section id="bar-nav">
+  <header id="bar-nav">
     <img src="assets/spotify-logo.png" alt="Logo Spotify" id="logo">
     <!-- tengo que poner el section para que el flex funcione correctamente-->
     <nav>
@@ -20,11 +20,17 @@
       <a href="http://">Help</a>
       <a href="http://">Download</a>
     </nav>
-  </section>
+  </header>
   <section id="hero">
-    <h1>Music for everyone.</h1>
-    <p>Spotify is now free on mobile, tablet and computer. Listen to the
-      right music, wherever you are.</p>
+    <img src="assets/landing.jpg" alt="hero-image">
+    <!-- tengo que incluir el div para centrar el texto dentro de la imagen sin tener que declarar otro contenedor diferente-->
+    <div class="hero-text">
+      <h1>Music for everyone.</h1>
+      <p>Spotify is now free on mobile, tablet and computer. Listen to the
+        right music, wherever you are.</p>
+      <button class="hero-btn">Register</button>
+    </div>
+
   </section>
   <section id="features">
     <h2>What’s on Spotify?</h2>
@@ -58,12 +64,15 @@
       Enjoy new music every Monday with your
       own personal playlist. Or sit back and enjoy Radio.</p>
 
-      <!-- puede que estos elementos deban ser modificados en la jerarquia para que funciona correctamente -->
-       <!-- a la imagen debo quitar el style luego pero  lo dejo asi de momento para ver el icono-->
-      <img src="assets/spotify-icon-white.png" alt="" style="background-color: black;"> 
-      <img src="assets/spotify-app.jpg" alt="">
+    <!-- puede que estos elementos deban ser modificados en la jerarquia para que funciona correctamente -->
+    <!-- a la imagen debo quitar el style luego pero  lo dejo asi de momento para ver el icono-->
+    <img src="assets/spotify-icon-white.png" alt="" style="background-color: black;">
+    <img src="assets/spotify-app.jpg" alt="">
   </section>
-
+<footer>
+  <p>2025 Spotify Clone</p>
+  <a href="https://github.com/GabrielFernandezMelendez">Github Gabriel Fernandez</a>
+</footer>
 </body>
 
 </html>
