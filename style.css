@@ -1,6 +1,8 @@
 /*variables para no  duplicar tanto  codigo*/
 :root {
   --color-brand: #1db954;
+  /*vairable añadida por mi */
+  --color-hover: #41d474;
   --color-bg: #191414;
   --color-text-primary: #ffffff;
   --color-text-secondary: #b3b3b3;
@@ -40,10 +42,10 @@ a {
 #logo {
   width: 40%;
   height: auto;
-}
-/*debo acostumbrarme a usar las variables de arriba*/
-h1 {
-  margin-bottom: var(--spacing-lg);
+  max-width: 200px;
+  margin-left: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #hero {
@@ -53,32 +55,43 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: var(--color-text-primary);
 }
 #hero img {
   /* Aseguramos una altura mínima para que el texto quepa */
-   position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;               /* Ocupa todo el contenedor */
-  object-fit: cover;           /* Cubre sin deformar */
-  z-index: -1;     
+  height: 100%; /* Ocupa todo el contenedor */
+  object-fit: cover; /* Cubre sin deformar(es lo correcto si  no la imagen se deforma al hacerse pequeña) */
+  z-index: -1;
 }
+
 .hero-text {
-  width: 90%;
-  max-width: 600px; /*le  ponemos un  maximo para mantener un tamaño agradable aunque la pantalla se expanda mas*/
+  width: 100%;
+  max-width: 400px; /*le  ponemos un  maximo para mantener un tamaño agradable aunque la pantalla se expanda mas*/
   text-align: center;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-text-primary);
+  font-family: var(--font-base); /*variables gabriel ,variables*/
+  font-size: var(--font-size-base);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*debo acostumbrarme a usar las variables de arriba*/
+.hero-text h1 {
+  margin-bottom: var(--spacing-lg);
+  font-weight: bolder;
+  font-size: 2.5rem; /*es lo mas cerca de poder ajustarlo a la imagen*/
 }
 
 .hero-btn {
   background-color: var(--color-brand);
-  color: white;
+  color: var(--color-text-primary);
   border: none;
   border-radius: 2rem;
-  font-size: 1rem; /* Tamaño base, lo ajustaremos */
+  font-size: 1rem;
   font-weight: bold;
   margin-top: var(--spacing-md);
 
@@ -93,7 +106,46 @@ h1 {
   transition: background-color 0.3s ease;
 }
 
-/**/
+/*esto hace que haya hover*/
 .hero-btn:hover {
-  background-color: #5fd148; /* verde más claro al pasar el ratón */
+  background-color: var(--color-hover); /* verde más claro al pasar el ratón */
 }
+
+/*estilos de la seccion features*/
+.feature {
+  display: flex;
+  flex-direction: column;   /* apila los elementos verticalmente */
+  align-items: center;      /* centra horizontalmente */
+  text-align: center;       /* centra el texto (útil para párrafos) */
+  margin-bottom: var(--spacing-lg); /* separación entre features */
+}
+.features h2{
+text-align: center;
+font-family: var(--font-base);
+margin-top: var(--spacing-md);
+/*estilo referente a la linea verde debajo de h2*/
+  text-decoration: underline;
+  text-decoration-color: var(--color-brand);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px; /* separación */
+}
+.feature img {
+  margin-top: var(--spacing-lg);
+  width: 100px;              /* tamaño fijo para todas las imágenes */
+  height: auto;              /* mantiene la proporción */
+  margin-bottom: var(--spacing-md); /* espacio debajo de la imagen */
+}
+
+.feature h3 {
+  width: 90%;              /* tamaño fijo para todas las imágenes */
+  height: auto;              /* mantiene la proporción */
+  margin-bottom: var(--spacing-md); /* espacio debajo de la imagen */
+  color: var(--color-brand);
+  font-weight:bold ;
+}
+
+.feature p {
+ width: 50%;
+}
+
+/*estilos de la seccion*/
