@@ -37,6 +37,9 @@ a {
 #bar-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center; /*importante para centrar el icono*/
+  position: relative;
+  z-index: 1000; /*tenemos que poner esto para que no se tape el contenido del menu */
 }
 
 #logo {
@@ -114,16 +117,16 @@ a {
 /*estilos de la seccion features*/
 .feature {
   display: flex;
-  flex-direction: column;   /* apila los elementos verticalmente */
-  align-items: center;      /* centra horizontalmente */
-  text-align: center;       /* centra el texto (útil para párrafos) */
+  flex-direction: column; /* apila los elementos verticalmente */
+  align-items: center; /* centra horizontalmente */
+  text-align: center; /* centra el texto (útil para párrafos) */
   margin-bottom: var(--spacing-lg); /* separación entre features */
 }
-.features h2{
-text-align: center;
-font-family: var(--font-base);
-margin-top: var(--spacing-md);
-/*estilo referente a la linea verde debajo de h2*/
+.features h2 {
+  text-align: center;
+  font-family: var(--font-base);
+  margin-top: var(--spacing-md);
+  /*estilo referente a la linea verde debajo de h2*/
   text-decoration: underline;
   text-decoration-color: var(--color-brand);
   text-decoration-thickness: 3px;
@@ -131,21 +134,140 @@ margin-top: var(--spacing-md);
 }
 .feature img {
   margin-top: var(--spacing-lg);
-  width: 100px;              /* tamaño fijo para todas las imágenes */
-  height: auto;              /* mantiene la proporción */
+  width: 100px; /* tamaño fijo para todas las imágenes */
+  height: auto; /* mantiene la proporción */
   margin-bottom: var(--spacing-md); /* espacio debajo de la imagen */
 }
 
 .feature h3 {
-  width: 90%;              /* tamaño fijo para todas las imágenes */
-  height: auto;              /* mantiene la proporción */
+  width: 90%; /* tamaño fijo para todas las imágenes */
+  height: auto; /* mantiene la proporción */
   margin-bottom: var(--spacing-md); /* espacio debajo de la imagen */
   color: var(--color-brand);
-  font-weight:bold ;
+  font-weight: bold;
 }
 
 .feature p {
- width: 50%;
+  width: 50%;
 }
 
 /*estilos de la seccion*/
+.last_section {
+  background-color: var(--color-brand);
+  text-align: center;
+  padding: 10px;
+}
+
+.last_section h2 {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--color-text-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.last_section h3,
+.last_section p {
+  color: var(--color-text-primary);
+  width:80%;
+  margin-top: 10px;              
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;      
+}
+
+.icon {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.app-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+}
+
+.footer {
+  text-align: center;
+  background-color: var(--color-brand);
+  padding-bottom: 20px;
+}
+
+/*menu hamburguesa*/
+/* ocultamos checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* icono */
+.menu-icon {
+  cursor: pointer;
+  width: 30px;
+  margin-right: 20px;
+
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  background: var(--color-bg);
+  margin: 6px 0;
+}
+
+/* ocultar el menu en movil */
+nav {
+  position: absolute;
+  top: 70px; /* debajo del header */
+  right: 0;
+  width: 100%;
+  background: white;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+#menu-toggle:checked ~ nav {
+  max-height: 300px;
+}
+
+nav a {
+  display: block;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+/* ===== TABLET (min-width: 768px) ===== */
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none; /* oculta el icono de hamburguesa */
+  }
+
+  nav {
+    position: static; /* quita la posición absoluta que tenía en móvil */
+    max-height: none; /* elimina la limitación de altura */
+    overflow: visible; /* asegura que se vea todo */
+    width: auto; /* que ocupe su contenido */
+    background: transparent; /* o el color que quieras, quizá blanco o transparente */
+    display: flex; /* para poner los enlaces en fila */
+    gap: 1rem; /* separación entre enlaces */
+    align-items: center; /* alineación vertical */
+  }
+
+  nav a {
+    display: inline-block; /* los enlaces ya no son bloque, sino en línea */
+    padding: 0.5rem 1rem; /* ajusta el padding */
+    border-bottom: none; /* quita la línea inferior del móvil */
+  }
+}
+
+/* ===== DESKTOP (min-width: 1024px) ===== */
+@media (min-width: 1024px) {
+  /* ajustes para escritorio */
+}

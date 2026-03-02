@@ -13,12 +13,22 @@
 
   <header id="bar-nav">
     <img src="assets/spotify-logo.png" alt="Logo Spotify" id="logo">
+
+    <!-- checkbox oculto -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- icono hamburguesa -->
+    <label for="menu-toggle" class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
     <!-- tengo que poner el section para que el flex funcione correctamente-->
     <nav>
-      <a href="http://">Premium</a>
-      <a href="http://">Discover</a>
-      <a href="http://">Help</a>
-      <a href="http://">Download</a>
+      <a href="https://github.com/GabrielFernandezMelendez/clon-spotify">Premium</a>
+      <a href="https://github.com/GabrielFernandezMelendez/clon-spotify">Discover</a>
+      <a href="https://github.com/GabrielFernandezMelendez/clon-spotify">Help</a>
+      <a href="https://github.com/GabrielFernandezMelendez/clon-spotify">Download</a>
     </nav>
   </header>
   <section id="hero">
@@ -53,8 +63,8 @@
       <p>Stream music on your smartphone, tablet or computer.</p>
     </article>
   </section>
-  
-  <section>
+
+  <section class="last_section">
     <h2>It’s as yeezy as Kanye West.</h2>
     <h3>Search</h3>
     <p>Know what you want to listen to? Just search and hit play.</p>
@@ -67,13 +77,13 @@
 
     <!-- puede que estos elementos deban ser modificados en la jerarquia para que funciona correctamente -->
     <!-- a la imagen debo quitar el style luego pero  lo dejo asi de momento para ver el icono-->
-    <img src="assets/spotify-icon-white.png" alt="" style="background-color: black;">
-    <img src="assets/spotify-app.jpg" alt="">
+    <img src="assets/spotify-icon-white.png" alt="icon" class="icon">
+    <img src="assets/spotify-app.jpg" alt="app-image" class="app-image">
   </section>
-<footer>
-  <p>2025 Spotify Clone</p>
-  <a href="https://github.com/GabrielFernandezMelendez">Github Gabriel Fernandez</a>
-</footer>
+  <footer class="footer">
+    <p>2025 Spotify Clone</p>
+    <a href="https://github.com/GabrielFernandezMelendez">Github Gabriel Fernandez</a>
+  </footer>
 </body>
 
 </html>
