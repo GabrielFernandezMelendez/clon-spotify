@@ -169,11 +169,11 @@ a {
 .last_section h3,
 .last_section p {
   color: var(--color-text-primary);
-  width:80%;
-  margin-top: 10px;              
+  width: 80%;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;      
+  text-align: center;
 }
 
 .icon {
@@ -209,7 +209,6 @@ a {
   cursor: pointer;
   width: 30px;
   margin-right: 20px;
-
 }
 
 .menu-icon span {
@@ -242,7 +241,6 @@ nav a {
   border-bottom: 1px solid #ddd;
 }
 
-
 /* ===== TABLET (min-width: 768px) ===== */
 @media (min-width: 768px) {
   .menu-icon {
@@ -251,7 +249,7 @@ nav a {
 
   nav {
     position: static; /* quita la posición absoluta que tenía en móvil */
-    max-height: none; /* elimina la limitación de altura */
+    max-height: none; 
     overflow: visible; /* asegura que se vea todo */
     width: auto; /* que ocupe su contenido */
     background: transparent; /* o el color que quieras, quizá blanco o transparente */
@@ -264,10 +262,63 @@ nav a {
     display: inline-block; /* los enlaces ya no son bloque, sino en línea */
     padding: 0.5rem 1rem; /* ajusta el padding */
     border-bottom: none; /* quita la línea inferior del móvil */
+    font-family: var(--font-base);
+    font-size: large;
+  }
+
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-lg);
+  }
+  .features h2 {
+    width: 100%; /* para que el título ocupe toda la fila */
+    text-align: center;
+  }
+  .feature {
+    flex: 1 1 200px; /* que crezcan y se encojan, con un ancho base (el 1 funciona a mi entender como  un  booleano que indica que si puede adaptarse)*/
+    max-width: 300px;
+  }
+  .last_section {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* texto | icono | app */
+    gap: var(--spacing-lg);
+    align-items: center;
+  }
+
+  .last_section-text {
+    grid-column: 1;
+    max-width: 600px; /* ajusta este valor a tu gusto */
+    margin-left: auto;
+    margin-right: auto; /* centra el bloque horizontalmente dentro de la columna */
+    text-align: left;
+    text-align: center; /* alineación izquierda */
+  }
+
+  .last_section-text h2 {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .icon-wrapper {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-image {
+    grid-column: 3;
+    max-width: 250px;
+    width: 100%;
   }
 }
 
 /* ===== DESKTOP (min-width: 1024px) ===== */
 @media (min-width: 1024px) {
   /* ajustes para escritorio */
+
+  .hero-btn {
+    display: none;
+  }
 }
