@@ -256,6 +256,7 @@ nav a {
     display: flex; /* para poner los enlaces en fila */
     gap: 1rem; /* separación entre enlaces */
     align-items: center; /* alineación vertical */
+    padding-right: 50px;
   }
 
   nav a {
@@ -264,6 +265,7 @@ nav a {
     border-bottom: none; /* quita la línea inferior del móvil */
     font-family: var(--font-base);
     font-size: large;
+
   }
 
   .features {
